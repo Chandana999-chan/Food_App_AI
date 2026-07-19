@@ -1,0 +1,13 @@
+.NumOfRestro {
+  font-size: 2rem;
+  color:white;
+  font-weight:bold;
+  margin-top: 4%;
+  text-shadow:2px 2px 8px rgba(0,0,0,.6);
+}
+
+.Restro {
+  font-size: 1.8rem;
+  margin-top: 4%;
+ 
+}
