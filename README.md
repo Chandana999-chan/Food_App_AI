@@ -1,4 +1,4 @@
-# 🍽️ OrderIt - AI Powered Food Ordering Application
+# 🍽️ Food_App_AI - AI Powered Food Ordering Application
 
 An intelligent food ordering web application built using the MERN Stack with AI-powered review sentiment analysis, secure authentication, Stripe payment integration, and responsive UI.
 
@@ -6,7 +6,7 @@ An intelligent food ordering web application built using the MERN Stack with AI-
 
 # 🚀 Project Overview
 
-OrderIt is a full-stack MERN application that allows users to browse restaurants, explore menus, add food items to cart, securely place orders, and analyze restaurant reviews using Artificial Intelligence.
+This is a full-stack MERN application that allows users to browse restaurants, explore menus, add food items to cart, securely place orders, and analyze restaurant reviews using Artificial Intelligence.
 
 The project integrates AI to automatically summarize customer reviews and identify the most frequently mentioned keywords, helping users make better food choices.
 
