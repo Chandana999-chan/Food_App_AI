@@ -97,22 +97,55 @@ The project integrates AI to automatically summarize customer reviews and identi
 
 ---
 
-# 🏗 System Architecture
+# 🏗️ System Architecture
 
-```
-User
-      │
-      ▼
-React Frontend (Vite)
-      │
- Axios API Calls
-      │
-      ▼
-Node.js + Express Backend
-      │
- ┌───────────────┬───────────────┬──────────────┐
- ▼               ▼               ▼
-MongoDB Atlas   Stripe API     Groq AI API
+```text
+                              +----------------------+
+                              |        User          |
+                              | (Web Browser Client) |
+                              +----------+-----------+
+                                         |
+                                         | HTTP Requests
+                                         |
+                                         ▼
++---------------------------------------------------------------+
+|               React.js Frontend (Vite)                        |
+|---------------------------------------------------------------|
+| • React Components                                            |
+| • Redux Toolkit (State Management)                            |
+| • React Router                                                |
+| • Axios API Calls                                             |
+| • Bootstrap + CSS                                             |
++---------------------------+-----------------------------------+
+                            |
+                            | REST API (JSON)
+                            |
+                            ▼
++---------------------------------------------------------------+
+|             Node.js + Express.js Backend                      |
+|---------------------------------------------------------------|
+| • Authentication (JWT)                                        |
+| • Restaurant APIs                                              |
+| • Menu APIs                                                    |
+| • Cart APIs                                                    |
+| • Order APIs                                                   |
+| • Coupon APIs                                                  |
+| • AI Review Analysis APIs                                      |
+| • Payment APIs                                                 |
++-----------+----------------------+----------------------------+
+            |                      |                    |
+            |                      |                    |
+            ▼                      ▼                    ▼
++------------------+     +----------------+    +-----------------+
+| MongoDB Atlas    |     | Stripe API     |    | Groq / OpenAI   |
+|------------------|     |----------------|    |-----------------|
+| • Users          |     | • Payments     |    | • Review        |
+| • Restaurants    |     | • Checkout     |    |   Summaries     |
+| • Menu Items     |     | • Transactions |    | • Sentiment     |
+| • Orders         |     +----------------+    | • Top Mentions  |
+| • Reviews        |                           +-----------------+
+| • Coupons        |
++------------------+
 ```
 
 ---
@@ -264,31 +297,31 @@ GROQ_API_KEY=
 
 1. User Login
 
-↓
+       ↓
 
 2. Browse Restaurants
 
-↓
+       ↓
 
 3. Select Food
 
-↓
+       ↓
 
 4. Add to Cart
 
-↓
+       ↓
 
 5. Stripe Payment
 
-↓
+       ↓
 
 6. Order Placed Successfully
 
-↓
+       ↓
 
 7. AI analyzes customer reviews
 
-↓
+       ↓
 
 8. AI displays summary and top mentions
 
@@ -322,7 +355,7 @@ During this project I learned
 
 ---
 
-# 👩 Author
+# Author
 
 ## Chandana K
 
