@@ -3,10 +3,8 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./config/config.env" });
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-console.log("KEY", process.env.STRIPE_SECRET_KEY);
 
 exports.processPayment = catchAsyncErrors(async (req, res, next) => {
-  console.log(req.body);
   const session = await stripe.checkout.sessions.create({
     customer_email: req.user.email,
     phone_number_collection: {
@@ -33,7 +31,7 @@ exports.processPayment = catchAsyncErrors(async (req, res, next) => {
           display_name: "Delivery Charges",
           type: "fixed_amount",
           fixed_amount: {
-            amount: 5500, // Amount in paise (e.g., 5500 = 55 INR)
+            amount: 5500,
             currency: "inr",
           },
           delivery_estimate: {
@@ -52,9 +50,9 @@ exports.processPayment = catchAsyncErrors(async (req, res, next) => {
     success_url: `${process.env.FRONTEND_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${process.env.FRONTEND_URL}/cart`,
   });
+
   res.status(200).json({ url: session.url });
 });
-
 // exports.paymentDetails = catchAsyncErrors(async (req, res, next) => {
 //   const session = await stripe.checkout.sessions.retrieve(
 //     "cs_test_b1wjqczdc5wwaNj5FjvxipLWeKZIvZQvsbC2OjfC5FEZw5vJ8aJbdMPRYC",
