@@ -12,7 +12,7 @@ body {
       rgba(38, 34, 31, 0.707),
       rgba(32, 36, 36, 0.651)
     ),
-    url("/images/fa.avif");
+    url("/images/fa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
