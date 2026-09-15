@@ -1,6 +1,12 @@
-# 🍽️ Food_App_AI - AI Powered Food Ordering Application
+# 🍽️ Food Genie - AI Powered Food Ordering Application
 
 An intelligent food ordering web application built using the MERN Stack with AI-powered review sentiment analysis, secure authentication, Stripe payment integration, and responsive UI.
+
+# 🌐 Live Demo
+
+**Live Application:** https://food-app-ai-five.vercel.app/
+
+> The application is deployed using Vercel (Frontend) and Render (Backend).
 
 ---
 
